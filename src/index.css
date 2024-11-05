@@ -110,6 +110,15 @@ body {
 .card img{
     width: 100%;
 }
+
+.single-article {
+    text-align: center;
+    padding: 30px 30px;
+}
+
+.single-article img{
+    width: 100%;
+}
   
   @media screen and (max-width: 600px) {
     .header a {
