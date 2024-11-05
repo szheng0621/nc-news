@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import './App.css';
+import Home from './components/Home';
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
+return (
+  <>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </>
+);
 
-  return (
-    <>
-     <h1>Hello NC Project</h1>
-       
-    </>
-  )
 }
 
 export default App
