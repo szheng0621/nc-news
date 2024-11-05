@@ -119,6 +119,11 @@ body {
 .single-article img{
     width: 600px;
 }
+.comment-card {
+    padding: 2px 20px;
+    background-color: rgb(229, 231, 234);
+    border-bottom: dotted 1px rgb(125, 126, 126);
+}
   
   @media screen and (max-width: 600px) {
     .header a {
