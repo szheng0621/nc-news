@@ -22,4 +22,11 @@ const getComments = (article_id) => {
     });
 }
 
-export { getArticles, getArticleById, getComments };
+const patchVotes = (article_id, { inc_votes }) => {
+    return api.patch(`/articles/${article_id}`, { inc_votes }).then(({data}) => {
+        return data.article;
+    })
+}
+
+
+export { getArticles, getArticleById, getComments, patchVotes };

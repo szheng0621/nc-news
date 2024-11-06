@@ -27,6 +27,7 @@ body {
     font-size: 50px;
     color: aliceblue;
     padding-top: 20px;
+    text-align: center;
   }
   
   .main-heading p {
@@ -123,7 +124,36 @@ body {
     padding: 2px 20px;
     background-color: rgb(229, 231, 234);
     border-bottom: dotted 1px rgb(125, 126, 126);
+    margin-right: 38px;
 }
+
+/* vote button style */
+
+.btn-group button {
+    background-color: #e9ebec; 
+    border: 1px solid rgb(117, 124, 126); 
+    color: rgb(130, 4, 4); 
+    font-weight: 600;
+    padding: 8px 15px; 
+    cursor: pointer; 
+    float: none;
+  }
+  
+ 
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; 
+  }
+  
+  .btn-group button:hover {
+    background-color: #d8dadb;
+    color: rgb(186, 54, 54); 
+  }
   
   @media screen and (max-width: 600px) {
     .header a {

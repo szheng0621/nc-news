@@ -19,7 +19,7 @@ export default function Header () {
             </section>
                 
             <section className="main-heading">
-                <h1>NC News</h1>
+            <Link to="/" ><h1>NC News</h1></Link>
             </section>
           
         </div>
