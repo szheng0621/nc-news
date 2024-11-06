@@ -26,6 +26,9 @@ const patchVotes = (article_id, { inc_votes }) => {
     return api.patch(`/articles/${article_id}`, { inc_votes }).then(({data}) => {
         return data.article;
     })
+    .catch((error) => {
+        return error
+    })
 }
 
 
