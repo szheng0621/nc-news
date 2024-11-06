@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../apiCall";
 import CommentsList from "./CommentsList";
+import VotesCounter from "./Votes";
 
 export default function SingleArticle () {
     const [singleArticle, setSingleArticle] = useState ({});
@@ -27,7 +28,7 @@ export default function SingleArticle () {
         <img src={singleArticle.article_img_url}></img>
         <p>{singleArticle.body}</p>
         <p><strong>Posted:</strong> {singleArticle.created_at}</p>
-        <p><strong>Votes:</strong> {singleArticle.votes}</p>
+        <VotesCounter />
     </div>
     <CommentsList />
 
