@@ -172,6 +172,23 @@ body {
     clear: both;
     color: rgb(175, 40, 40);
 }
+.delete-btn {
+    width: auto;
+    padding: 5px 20px;
+    background-color: rgb(166, 19, 19);
+    color: #d8dadb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: -45px; 
+
+}
+
+.delete-btn:hover {
+    color: #0b1622;
+    background-color: rgb(237, 118, 118);
+}
 /* vote button style */
 
 .btn-group button {
