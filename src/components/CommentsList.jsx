@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getComments } from "../apiCall"
 import { useParams } from 'react-router-dom';
 import CommentCard from "./CommentCard";
+import CommentAdder from "./CommentAdder";
 
 export default function CommentsList () {
     const [comments, setComments] = useState ([]);
@@ -13,6 +14,12 @@ export default function CommentsList () {
         setComments (commentsList);
        })
     };
+
+    const addComment = (commentToAdd) => {
+        setComments((currentComments) => {
+            return [commentToAdd, ...currentComments]
+        })
+    }
    
     useEffect (() => {
         if (article_id) {
@@ -21,6 +28,8 @@ export default function CommentsList () {
     }, [article_id])
 
     return (
+        <section>
+            <CommentAdder addComment={addComment}/>
             <ul>
             {comments && comments.length > 0 ? (
                 comments.map((comment) => {
@@ -30,5 +39,6 @@ export default function CommentsList () {
                 <p>No comments available for this article.</p>
             )}
         </ul>
+        </section>
     );
 }

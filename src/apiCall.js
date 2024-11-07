@@ -19,7 +19,11 @@ const getArticleById = (article_id) => {
 const getComments = (article_id) => {
     return api.get(`/articles/${article_id}/comments`).then(({data}) => {
         return data;
-    });
+    })
+    .catch((error) => {
+        console.log("error, can not get comment")
+        return error
+    })
 }
 
 const patchVotes = (article_id, { inc_votes }) => {
@@ -31,5 +35,15 @@ const patchVotes = (article_id, { inc_votes }) => {
     })
 }
 
+const postComment = (article_id, { username, body }) => {
+    return api.post(`/articles/${article_id}/comments`, { username, body }).then(({data}) => {
+        return data;
+    })
+    .catch((error) => {
+        console.log("error, can not post comment")
+        return error
+    })
+}
 
-export { getArticles, getArticleById, getComments, patchVotes };
+
+export { getArticles, getArticleById, getComments, patchVotes, postComment };
