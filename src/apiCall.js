@@ -45,5 +45,16 @@ const postComment = (article_id, { username, body }) => {
     })
 }
 
+const deleteCommentById = (comment_id) => {
+    return api.delete(`/comments/${comment_id}`).then(({data}) => {
+        return data;
+    })
+    .catch((error) => {
+        console.log("error, can not get comment")
+        return error
+    })
 
-export { getArticles, getArticleById, getComments, patchVotes, postComment };
+}
+
+
+export { getArticles, getArticleById, getComments, patchVotes, postComment, deleteCommentById };
