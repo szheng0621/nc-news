@@ -106,17 +106,9 @@ a:hover {
     list-style-type: none;
     flex-wrap: wrap;
     padding: 0px;
-    /* float: left;
-    width: 30%;
-    padding: 0 10px; */
     
   }
-  /* .row { margin: 0 -5px;} */
-  /* .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
+
 .card {
     /* box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2); */
     border-radius: 5px;
