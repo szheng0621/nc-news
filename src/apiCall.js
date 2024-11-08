@@ -56,5 +56,24 @@ const deleteCommentById = (comment_id) => {
 
 }
 
+const getTopics = () => {
+    return api.get(`/topics`).then(({ data }) => {
+      return data.topics;
+    }).catch((error) => {
+        return error
+    })
+  };
 
-export { getArticles, getArticleById, getComments, patchVotes, postComment, deleteCommentById };
+const getArticlesByTopic = (topic) => {
+    return api.get("/articles", {
+      params: { 
+        topic,
+      }
+    }).then(({ data: { articles } }) => {
+   
+      return articles;
+    });
+  }
+
+
+export { getArticles, getArticleById, getComments, patchVotes, postComment, deleteCommentById, getTopics, getArticlesByTopic };

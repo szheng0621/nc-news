@@ -9,17 +9,19 @@ export default function Header () {
             </section>
 
             <section className="header-right">
+            
                 <form className="search-container" action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search" />
                 </form>
                 <Link to="/" >Home</Link>
-                <Link to="/" >Coding</Link>
-                <Link to="/" >Cooking</Link>
-                <Link to="/" >Football</Link>
+                <Link to="/topics/coding" >Coding</Link>
+                <Link to="/topics/cooking" >Cooking</Link>
+                <Link to="/topics/football" >Football</Link>
+               
             </section>
                 
             <section className="main-heading">
-            <Link to="/" ><h1>NC News</h1></Link>
+            <Link to="/" ><h1>NC News</h1></Link> 
             </section>
           
         </div>
